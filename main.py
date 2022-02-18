@@ -50,7 +50,7 @@ def getTopStories():
             SimilarNews: {news["SimilarNews"]}
         ''')
 
-def getTopicsNews():
+def getTopics():
     allNews = []
     for block in newsBlock:
         headingText = block.find('article', class_="MQsxIb xTewfe R7GTQ keNKEd j7vNaf Cc0Z5d EjqUne").h3.a.text
@@ -80,7 +80,7 @@ def getTopicsNews():
 
 def main():
     if("topics" in query):
-        getTopicsNews()
+        getTopics()
     elif("topstories" in query):
         getTopStories()
 
